@@ -18,10 +18,10 @@ export default function Header() {
     if (window.innerWidth > 699) {
       closeNav()
     }
-  }, [isOpen]);
+  }, []);
 
   return (
-    <header className="py-5 px-4 shadow-lg">
+    <header className="py-5 px-4 shadow-lg lg:flex lg:justify-between lg:py-3">
       <aside className="flex justify-between items-center ">
         <img
           src={isOpen ? close : hamburger}
@@ -30,7 +30,7 @@ export default function Header() {
           alt="menu"
           className="w-6 lg:hidden"
         />
-        <h2 className="w-11/12 text-[25px] font-bold text-center font-headings">ARTSY.</h2>
+        <h2 className="w-11/12 lg:w-12/12 text-[25px] font-bold text-center font-headings">ARTSY.</h2>
       </aside>
       <nav>
         {isOpen ? <Navbar setIsOpen={setIsOpen} isOpen={isOpen} /> : ""}

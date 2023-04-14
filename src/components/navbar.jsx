@@ -22,22 +22,22 @@ export default function Navbar({ isOpen, setIsOpen }) {
   }, [location])
 
   return (
-    <nav className="relative py-5 my-4 px-3 h-[80vh] shadow-lg rounded-lg border font-body">
-      <ul className='flex justify-start items-start flex-col'>
-        <Link to="/" className={`${active === "Home" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 py-2 px-3 text-[18p] font-semibold`}>
+    <nav className="relative py-5 my-4 px-3 h-[80vh] shadow-lg lg:shadow-none rounded-lg border font-body lg:h-auto lg:py-0 lg:border-none lg:w-12/12">
+      <ul className='flex justify-start items-start flex-col lg:flex-row'>
+        <Link to="/" className={`${active === "Home" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 lg:mb-0 py-2 px-3 text-[18p] font-semibold`}>
           <li id="Home"  onClick={closeNav} >Home</li>
         </Link>
-        <Link to="auction" id="Auction" className={`${active === "Auction" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 py-2 px-3 text-[18p]  font-semibold`} onClick={() => setActive("Auction")}  >
+        <Link to="auction" id="Auction" className={`${active === "Auction" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 lg:mb-0 py-2 px-3 text-[18p]  font-semibold`} onClick={() => setActive("Auction")}  >
           <li onClick={closeNav}>Orders</li>
         </Link>
-        <Link to="Marketplace" id="Marketplace" className={`${active === "Marketplace" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 py-2 px-3 text-[18p]  font-semibold`} onClick={() => setActive("Marketplace")}>
+        <Link to="Marketplace" id="Marketplace" className={`${active === "Marketplace" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 lg:mb-0 py-2 px-3 text-[18p]  font-semibold`} onClick={() => setActive("Marketplace")}>
           <li onClick={closeNav}>Items</li>
         </Link>
-        <Link to="drop" id="Drop" className={`${active === "Drop" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 py-2 px-3 text-[18p]  font-semibold`} onClick={() => setActive("Drop")}>
+        <Link to="drop" id="Drop" className={`${active === "Drop" ? "bg-blue-700 text-white" : "bg-white text-black"} mb-2 lg:mb-0 py-2 px-3 text-[18p]  font-semibold`} onClick={() => setActive("Drop")}>
           <li onClick={closeNav}>Sales</li>
         </Link>
       </ul>
-      <div className="absolute bottom-10 right-3" onClick={closeNav} >
+      <div className="absolute bottom-10 right-3 lg:hidden" onClick={closeNav} >
         <svg
           width="86"
           height="87"
